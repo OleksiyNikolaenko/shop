@@ -14,7 +14,7 @@ export const Navigation = () => {
 
   const menuClasses = `
   flex flex-col items-center justify-center gap-10
-  fixed top-0 right-0 h-screen w-4/5 bg-black/40
+  fixed top-0 right-0 z-10 h-screen w-4/5 bg-gray-500
   transform transition-transform duration-300 ease-in-out
   ${isMenuOpen ? 'translate-x-0' : 'translate-x-[550px]'}
   

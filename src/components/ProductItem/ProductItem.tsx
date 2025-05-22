@@ -50,7 +50,7 @@ export const ProductItem = ({
               price,
             })
           }>
-          Add to card
+          В кошик
         </Button>
       </div>
       <Button
