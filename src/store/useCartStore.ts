@@ -7,13 +7,13 @@ interface CartProduct extends Product {
 
 interface CartStore {
   cartProducts: CartProduct[];
-  addItemToStore: (product: Product) => void;
-  removeItemToStore?: (productId: number) => void;
+  addItemToCart: (product: Product) => void;
+  removeItemFromCart: (productId: number) => void;
 }
 
 export const useCartStore = create<CartStore>((set) => ({
   cartProducts: [],
-  addItemToStore: (product) =>
+  addItemToCart: (product) =>
     set((state) => {
       const isExist = state.cartProducts.find((p) => p.id === product.id);
 
@@ -34,7 +34,7 @@ export const useCartStore = create<CartStore>((set) => ({
         cartProducts: [newCartProduct, ...state.cartProducts],
       };
     }),
-  removeItemToStore: (id) =>
+  removeItemFromCart: (id) =>
     set((state) => ({
       cartProducts: state.cartProducts.filter((p) => p.id !== id),
     })),
