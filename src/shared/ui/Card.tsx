@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 export const Card = ({
   children,
-  className,
+  className = '',
 }: {
   className?: string;
   children: ReactNode;
