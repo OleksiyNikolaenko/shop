@@ -1,4 +1,4 @@
-import { Footer, Header } from '@/components';
+import { Footer, Header } from '@/widgets';
 import type { Metadata } from 'next';
 import './globals.css';
 
