@@ -2,6 +2,7 @@ import { Header } from '@/src/widgets/header'
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 import "./globals.css"
+import { Footer } from '@/src/widgets/footer'
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -24,6 +25,7 @@ export default function RootLayout({
                 className={`${roboto.variable} flex h-screen flex-col antialiased`}>
                   <Header/>
                 <main className="flex-1">{children}</main>
+                <Footer/>
             </body>
         </html>
     );
