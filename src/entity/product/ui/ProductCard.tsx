@@ -5,14 +5,14 @@ import Link from "next/link";
 import { ProductCardProps } from "../model/types/ProductCard.props";
 
 export const ProductCard = (props: ProductCardProps) => {
-    const { id, images, price, title } = props;
+    const { id, image, price, title } = props;
     return (
         <Card className="w-full sm:w-[200px]">
             <CardContent className="flex items-center justify-between sm:flex-col">
                 <Link className="sm:block sm:w-full" href={`/product/${id}`}>
                     <Image
                         className="rounded-xl sm:w-full sm:rounded-none"
-                        src={images[0]}
+                        src={image}
                         alt={title}
                         width={112}
                         height={112}
